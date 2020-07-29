@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatty App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet'
+        type='text/css'>
+</head>
+
+<body>
+    <div id="frame">
+        <div id="sidepanel">
+            <div id="profile">
+                <div class="wrap">
+                    <p class="bold-text"><i class="fa fa-users"></i> Users</p>
+                </div>
+            </div>
+            <div id="search">
+            </div>
+            <div>
+                <ul id="contacts">
+                </ul>
+            </div>
+            <div id="bottom-bar">
+                <button onclick="location.href='index.html'" id="leave-room"><i class="fa fa-sign-out"
+                        aria-hidden="true"></i><span>Leave
+                        Room</span></button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="contact-profile">
+                <p class="bold-text" id="room-name"></p>
+            </div>
+            <ul class="messages">
+            </ul>
+            <div class="message-input">
+                <form class="wrap" id="chat-form">
+                    <input id="msg" type="text" required placeholder="Write your message..." />
+                    <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.1/qs.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
